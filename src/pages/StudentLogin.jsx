@@ -12,7 +12,7 @@ function StudentLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/student-login", { rollNo, dob });
+      const res = await axios.post("https://note-backend-slob.onrender.com/api/auth/student-login", { rollNo, dob });
       localStorage.setItem("studentData", JSON.stringify(res.data));
       navigate("/student-dashboard");
     } catch (err) {
