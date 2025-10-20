@@ -19,7 +19,7 @@ function ManageNotes() {
       const token = localStorage.getItem("adminToken");
       if (!token) throw new Error("Admin token not found");
 
-      const res = await axios.get("/api/admin/notes", {
+      const res = await axios.get("https://note-backend-slob.onrender.com/api/admin/notes", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
