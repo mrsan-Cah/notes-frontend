@@ -25,7 +25,7 @@ function AddStudent() {
     e.preventDefault();
     try {
       const token = localStorage.getItem("adminToken");
-      await axios.post("/api/admin/students", form, {
+      await axios.post("https://note-backend-slob.onrender.com/api/admin/students", form, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage("Student added successfully!");
