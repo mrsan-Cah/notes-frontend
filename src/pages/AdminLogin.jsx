@@ -18,7 +18,7 @@ function AdminLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/admin-login", {
+      const res = await axios.post("https://note-backend-slob.onrender.com/api/auth/admin-login", {
         username,
         password,
         department,
