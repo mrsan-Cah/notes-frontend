@@ -19,7 +19,7 @@ function AdminRegister() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/auth/admin-register", form);
+      await axios.post("https://note-backend-slob.onrender.com/api/auth/admin-register", form);
       setMessage("Admin registered successfully! Redirecting to login...");
       setError("");
       setForm({ username: "", password: "", department: "CSE" });
