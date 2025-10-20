@@ -37,7 +37,7 @@ function UploadNotes() {
 
     try {
       const token = localStorage.getItem("adminToken");
-      await axios.post("/api/admin/notes", formData, {
+      await axios.post("https://note-backend-slob.onrender.com/api/admin/notes", formData, {
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" }
       });
       setMessage("Note uploaded successfully!");
